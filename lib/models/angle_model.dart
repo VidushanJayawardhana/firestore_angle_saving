@@ -1,10 +1,10 @@
 class AngleModel {
-  double angle1;
-  double angle2;
-  double angle3;
-  double angle4;
-  double angle5;
-  double angle6;
+  int angle1;
+  int angle2;
+  int angle3;
+  int angle4;
+  int angle5;
+  int angle6;
 
   AngleModel({
     required this.angle1,
@@ -17,12 +17,12 @@ class AngleModel {
 
   factory AngleModel.fromJson(Map<String, dynamic> json) {
     return AngleModel(
-        angle1: json['angle1'] as double,
-        angle2: json['angle2'] as double,
-        angle3: json['angle3'] as double,
-        angle4: json['angle4'] as double,
-        angle5: json['angle5'] as double,
-        angle6: json['angle6'] as double);
+        angle1: json['angle1'] as int,
+        angle2: json['angle2'] as int,
+        angle3: json['angle3'] as int,
+        angle4: json['angle4'] as int,
+        angle5: json['angle5'] as int,
+        angle6: json['angle6'] as int);
   }
 
   Map<String, Object?> toJson() {

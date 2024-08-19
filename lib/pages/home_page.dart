@@ -206,14 +206,15 @@ class _HomePageState extends State<HomePage> {
             //Submit button
             ElevatedButton(
               onPressed: () {
+                // Add the angle to the database
                 _databaseService.addAngle(
                   AngleModel(
-                    angle1: _currentAngle1,
-                    angle2: _currentAngle2,
-                    angle3: _currentAngle3,
-                    angle4: _currentAngle4,
-                    angle5: _currentAngle5,
-                    angle6: _currentAngle6,
+                    angle1: _currentAngle1.round(),
+                    angle2: _currentAngle2.round(),
+                    angle3: _currentAngle3.round(),
+                    angle4: _currentAngle4.round(),
+                    angle5: _currentAngle5.round(),
+                    angle6: _currentAngle6.round(),
                   ),
                 );
               },
