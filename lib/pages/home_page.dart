@@ -202,23 +202,46 @@ class _HomePageState extends State<HomePage> {
                 );
               },
             ),
+            const SizedBox(
+              height: 20,
+            ),
 
             //Submit button
-            ElevatedButton(
-              onPressed: () {
-                // Add the angle to the database
-                _databaseService.addAngle(
-                  AngleModel(
-                    angle1: _currentAngle1.round(),
-                    angle2: _currentAngle2.round(),
-                    angle3: _currentAngle3.round(),
-                    angle4: _currentAngle4.round(),
-                    angle5: _currentAngle5.round(),
-                    angle6: _currentAngle6.round(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    // Add the angle to the database
+                    _databaseService.addAngle(
+                      AngleModel(
+                        angle1: _currentAngle1.round(),
+                        angle2: _currentAngle2.round(),
+                        angle3: _currentAngle3.round(),
+                        angle4: _currentAngle4.round(),
+                        angle5: _currentAngle5.round(),
+                        angle6: _currentAngle6.round(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5.0),
+                    ),
                   ),
-                );
-              },
-              child: const Text('Submit'),
+                  child: const Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                    child: Text(
+                      'Submit',
+                      style: TextStyle(
+                          fontSize: 25.0,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

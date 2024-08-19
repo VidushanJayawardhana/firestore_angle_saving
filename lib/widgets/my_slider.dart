@@ -13,7 +13,10 @@ class MySlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Slider(
-      max: 90.0,
+      inactiveColor: const Color.fromARGB(255, 171, 207, 236),
+      activeColor: Colors.blue,
+      thumbColor: const Color.fromARGB(255, 1, 130, 235),
+      max: 180.0,
       min: 0.0,
       value: value,
       onChanged: onChanged,
